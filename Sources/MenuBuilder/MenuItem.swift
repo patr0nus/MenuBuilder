@@ -29,15 +29,6 @@ public struct MenuItem: AnyMenuItem {
         }]
     }
 
-    /// Creates a menu item with the given attributed title.
-    @available(macOS 12, *)
-    public init(_ title: AttributedString) {
-        modifiers = [{ item in
-            item.title = title.description
-            item.attributedTitle = NSAttributedString(title)
-        }]
-    }
-
     /// Creates a menu item with a submenu containing the provided children.
     ///
     /// > Important: This initializer is deprecated.
